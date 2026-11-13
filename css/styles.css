@@ -1,5 +1,5 @@
-/* Korvix Prime. Horizon site styles.
-   Palette sampled from locked Horizon brand kit. */
+/* Korvix Prime site styles.
+   Palette sampled from the locked brand kit. */
 
 :root {
   --signal-orange: #F55702;
@@ -172,6 +172,13 @@ a:focus-visible,
 .nav a:hover,
 .nav a:focus-visible {
   color: var(--white);
+}
+
+.nav .nav-current {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
 }
 
 /* Hero */
@@ -577,7 +584,11 @@ a.latest-item:focus-visible {
 
 /* Mobile tweaks */
 @media (max-width: 640px) {
-  .nav a:not(.nav-cta) {
+  .nav a:not(.nav-cta):not(.nav-page) {
+    display: none;
+  }
+
+  .nav .nav-current {
     display: none;
   }
 
@@ -631,5 +642,171 @@ a.latest-item:focus-visible {
   a.latest-item:hover,
   a.latest-item:focus-visible {
     transform: none;
+  }
+}
+
+/* Team page */
+.team-section {
+  padding: 1.75rem 0 3rem;
+}
+
+.team-section h1 {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3.4vw, 2.15rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.page-note {
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 1.05rem;
+  max-width: 46rem;
+  border-radius: var(--radius);
+  border: 1px solid rgba(44, 180, 214, 0.4);
+  background:
+    linear-gradient(135deg, rgba(44, 180, 214, 0.10), transparent 50%),
+    var(--void-navy-elevated);
+  color: var(--white);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.team-grid {
+  display: grid;
+  gap: 1.15rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.team-card {
+  background: linear-gradient(165deg, rgba(14, 22, 38, 0.95), rgba(10, 16, 28, 0.98));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card .portrait {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+  background: var(--void-navy-elevated);
+}
+
+.card-body {
+  padding: 0.95rem 1.05rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.team-card .card-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: none;
+}
+
+/* Visible "AI teammate" badge immediately under the name, including on mobile. Not a tooltip or footer. */
+.ai-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0.45rem 0 0.55rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ion-cyan);
+  background: rgba(44, 180, 214, 0.14);
+  border: 1px solid rgba(44, 180, 214, 0.5);
+}
+
+/* Distinct from .ai-badge: honorary members are real people, not AI teammates. */
+.honorary-badge {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0.45rem 0 0.55rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--signal-orange);
+  background: rgba(245, 87, 2, 0.14);
+  border: 1px solid rgba(245, 87, 2, 0.5);
+}
+
+.honorary-section {
+  margin-top: 2.25rem;
+  padding: 0;
+}
+
+h2.honorary-heading {
+  margin: 0 0 1rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ion-cyan);
+}
+
+.card-title {
+  margin: 0 0 0.45rem;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text-muted);
+}
+
+.card-role {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.footer-meta {
+  margin: 0;
+  max-width: 28rem;
+}
+
+.footer-meta + .footer-meta {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .team-section {
+    padding: 1.15rem 0 2.25rem;
+  }
+
+  .page-note {
+    font-size: 0.92rem;
+    padding: 0.8rem 0.9rem;
+    margin-bottom: 1.15rem;
   }
 }
