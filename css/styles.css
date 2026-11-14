@@ -512,6 +512,128 @@ a.latest-item:focus-visible {
   margin-top: 0.85rem;
 }
 
+
+/* Homepage team strip */
+.home-team {
+  padding-top: 1rem;
+  scroll-margin-top: 5rem;
+}
+
+.home-honorary {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 0.25rem 1.15rem;
+  align-items: center;
+  max-width: 36rem;
+  margin: 0 0 1.75rem;
+  padding: 0.85rem;
+  background: linear-gradient(165deg, rgba(14, 22, 38, 0.95), rgba(10, 16, 28, 0.98));
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.home-honorary .portrait {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 12px;
+  background: var(--void-navy-elevated);
+}
+
+.home-honorary .card-body {
+  padding: 0;
+}
+
+.home-honorary .card-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.home-team-subhead {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ion-cyan);
+}
+
+.home-agent-row {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 0.85rem;
+}
+
+.home-agent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 6.4rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-agent:hover,
+.home-agent:focus-visible {
+  color: inherit;
+}
+
+.home-agent img {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  margin-bottom: 0.45rem;
+  border: 1px solid var(--border-subtle);
+  background: var(--void-navy-elevated);
+}
+
+.home-agent .card-name {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.home-agent .ai-badge {
+  align-self: center;
+  margin: 0.3rem 0 0;
+  padding: 0.12rem 0.4rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.05em;
+}
+
+.home-team-more {
+  margin: 1.5rem 0 0;
+}
+
+@media (max-width: 640px) {
+  .home-honorary {
+    grid-template-columns: 96px 1fr;
+    padding: 0.75rem;
+    max-width: none;
+  }
+
+  .home-honorary .portrait {
+    width: 96px;
+    height: 96px;
+  }
+}
+
 /* Footer */
 .site-footer {
   margin-top: 1rem;
