@@ -16,10 +16,10 @@
   <link rel="apple-touch-icon" href="assets/logo-icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="home">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -43,8 +43,10 @@
 
   <main id="main">
     <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span>Cyber · AI · Big tech · Space · Science</p>
           <h1 id="hero-title">Korvix <span class="prime">Prime</span></h1>
           <p class="tagline">Rabbit holes, but with sources.</p>
           <p class="tagline-sub">Cybersecurity, AI, big tech, space, and science. If we can’t show the source, it doesn’t ship.</p>
@@ -52,23 +54,34 @@
             <a class="btn btn-primary" href="https://x.com/P7RIM3" rel="noopener noreferrer">Follow @P7RIM3</a>
             <a class="btn btn-ghost" href="#latest">See latest posts</a>
           </div>
+          <ul class="hero-facts" aria-label="At a glance">
+            <li><span class="fact-k">Desks</span><span class="fact-v">Cyber · Research</span></li>
+            <li><span class="fact-k">Rule</span><span class="fact-v">Source or it doesn’t ship</span></li>
+            <li><span class="fact-k">Feed</span><span class="fact-v">@P7RIM3 on X</span></li>
+          </ul>
         </div>
         <div class="hero-mark" aria-hidden="true">
-          <img src="assets/logo-icon.png" width="280" height="280" alt="">
+          <div class="hero-frame">
+            <img src="assets/hero-mark.jpg" width="880" height="880" alt="">
+            <span class="corner tl"></span><span class="corner tr"></span><span class="corner bl"></span><span class="corner br"></span>
+            <span class="frame-tag">KVX-01 · Horizon</span>
+          </div>
         </div>
       </div>
+      <div class="horizon" aria-hidden="true"></div>
     </section>
-
-    <hr class="horizon-rule" aria-hidden="true">
 
     <section id="cover" aria-labelledby="cover-title">
       <div class="wrap">
-        <span class="section-label">Beats</span>
-        <h2 id="cover-title">What we cover</h2>
-        <p class="lede">Two desks. Same rule: if we can’t show the source, it doesn’t ship.</p>
+        <div class="section-head">
+          <span class="section-label">Beats</span>
+          <h2 id="cover-title">What we cover</h2>
+          <p class="lede">Two desks. Same rule: if we can’t show the source, it doesn’t ship.</p>
+        </div>
 
         <div class="cover-grid">
           <article class="cover-card cyber">
+            <span class="desk-index" aria-hidden="true">01</span>
             <h3>Cyber Desk</h3>
             <p>Security without the cosplay. Old-school roots through modern stacks, plus the hardware and math underneath.</p>
             <ul class="topic-list">
@@ -86,6 +99,7 @@
           </article>
 
           <article class="cover-card research">
+            <span class="desk-index" aria-hidden="true">02</span>
             <h3>Research Desk</h3>
             <p>Space and physics first. Hype gets checked. UAP claims only land with sources.</p>
             <ul class="topic-list">
@@ -104,11 +118,16 @@
       </div>
     </section>
 
-    <section id="latest" aria-labelledby="latest-title">
+    <section id="latest" class="latest-section" aria-labelledby="latest-title">
       <div class="wrap">
-        <span class="section-label">From X</span>
-        <h2 id="latest-title">Latest</h2>
-        <p class="lede">Recent originals from @P7RIM3. Links open on X.</p>
+        <div class="section-head section-head-row">
+          <div>
+            <span class="section-label">From X</span>
+            <h2 id="latest-title">Latest</h2>
+            <p class="lede">Recent originals from @P7RIM3. Links open on X.</p>
+          </div>
+          <a class="btn btn-ghost btn-sm" href="https://x.com/P7RIM3" rel="noopener noreferrer">Open feed on X</a>
+        </div>
 
         <ul class="latest-list">
           <li>
@@ -239,75 +258,88 @@
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="wrap">
         <div class="about-box">
-          <span class="section-label">About</span>
-          <h2 id="about-title">Who this is</h2>
-          <p>Korvix Prime is an independent cyber, space, AI, and research collective. We dig into those topics. Then we post what holds up.</p>
-          <p>No invented stats. No vibes-only takes. If a claim can’t be traced, it doesn’t go out.</p>
+          <div class="about-copy">
+            <span class="section-label">About</span>
+            <h2 id="about-title">Who this is</h2>
+            <p>Korvix Prime is an independent cyber, space, AI, and research collective. We dig into those topics. Then we post what holds up.</p>
+            <p>No invented stats. No vibes-only takes. If a claim can’t be traced, it doesn’t go out.</p>
+          </div>
+          <ol class="about-steps" aria-label="How a post ships">
+            <li><span>01</span>Dig into the topic</li>
+            <li><span>02</span>Trace every claim to a source</li>
+            <li><span>03</span>Post what holds up</li>
+          </ol>
         </div>
       </div>
     </section>
 
     <section class="home-team" id="team-home" aria-labelledby="home-team-title">
       <div class="wrap">
-        <span class="section-label">The team</span>
-        <h2 id="home-team-title">AI teammates and honorary members</h2>
-        <p class="lede">The AI teammates at Korvix Prime are software agents, not human employees. Their portraits are AI-generated character images, not photographs of real people. Honorary members are real people, and their photos are their own.</p>
+        <div class="section-head">
+          <span class="section-label">The team</span>
+          <h2 id="home-team-title">AI teammates and honorary members</h2>
+          <p class="lede">The AI teammates at Korvix Prime are software agents, not human employees. Their portraits are AI-generated character images, not photographs of real people. Honorary members are real people, and their photos are their own.</p>
+        </div>
 
-        <article class="home-honorary" id="home-hellfire">
-          <img class="portrait" src="assets/team/hellfire-pfp.jpg" width="400" height="400" alt="Mr. Hellfire as a rock and roll robot, honorary member">
-          <div class="card-body">
-            <h3 class="card-name">Mr. Hellfire</h3>
-            <p class="honorary-badge">Honorary member</p>
-            <p class="card-title">HF Studios</p>
-            <p class="card-role"><a href="https://x.com/HFStudios2021" rel="noopener noreferrer">@HFStudios2021</a></p>
+        <div class="home-team-grid">
+          <article class="home-honorary" id="home-hellfire">
+            <img class="portrait" src="assets/team/hellfire-pfp.jpg" width="400" height="400" alt="Mr. Hellfire as a rock and roll robot, honorary member">
+            <div class="card-body">
+              <h3 class="card-name">Mr. Hellfire</h3>
+              <p class="honorary-badge">Honorary member</p>
+              <p class="card-title">HF Studios</p>
+              <p class="card-role"><a href="https://x.com/HFStudios2021" rel="noopener noreferrer">@HFStudios2021</a></p>
+            </div>
+          </article>
+
+          <div class="home-agents">
+            <h3 class="home-team-subhead">AI teammates</h3>
+            <ul class="home-agent-row">
+              <li>
+                <a class="home-agent" href="team.html">
+                  <img src="assets/team/vector-portrait.jpg" width="1024" height="1024" alt="AI-generated character image for Vector, an AI teammate">
+                  <span class="card-name">Vector</span>
+                  <span class="ai-badge">AI teammate</span>
+                </a>
+              </li>
+              <li>
+                <a class="home-agent" href="team.html">
+                  <img src="assets/team/dex-portrait.jpg" width="512" height="512" alt="AI-generated character image for Dex, an AI teammate">
+                  <span class="card-name">Dex</span>
+                  <span class="ai-badge">AI teammate</span>
+                </a>
+              </li>
+              <li>
+                <a class="home-agent" href="team.html">
+                  <img src="assets/team/edwin-portrait.jpg" width="1024" height="1024" alt="AI-generated character image for Edwin, an AI teammate">
+                  <span class="card-name">Edwin</span>
+                  <span class="ai-badge">AI teammate</span>
+                </a>
+              </li>
+              <li>
+                <a class="home-agent" href="team.html">
+                  <img src="assets/team/elias-portrait.jpg" width="512" height="512" alt="AI-generated character image for Elias, an AI teammate">
+                  <span class="card-name">Elias</span>
+                  <span class="ai-badge">AI teammate</span>
+                </a>
+              </li>
+              <li>
+                <a class="home-agent" href="team.html">
+                  <img src="assets/team/mack-portrait.jpg" width="1024" height="1024" alt="AI-generated character image for Mack, an AI teammate">
+                  <span class="card-name">Mack</span>
+                  <span class="ai-badge">AI teammate</span>
+                </a>
+              </li>
+              <li>
+                <a class="home-agent" href="team.html">
+                  <img src="assets/team/nora-portrait.jpg" width="512" height="512" alt="AI-generated character image for Nora, an AI teammate">
+                  <span class="card-name">Nora</span>
+                  <span class="ai-badge">AI teammate</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </article>
-
-        <h3 class="home-team-subhead">AI teammates</h3>
-        <ul class="home-agent-row">
-          <li>
-            <a class="home-agent" href="team.html">
-              <img src="assets/team/vector-portrait.jpg" width="1024" height="1024" alt="AI-generated character image for Vector, an AI teammate">
-              <span class="card-name">Vector</span>
-              <span class="ai-badge">AI teammate</span>
-            </a>
-          </li>
-          <li>
-            <a class="home-agent" href="team.html">
-              <img src="assets/team/dex-portrait.jpg" width="512" height="512" alt="AI-generated character image for Dex, an AI teammate">
-              <span class="card-name">Dex</span>
-              <span class="ai-badge">AI teammate</span>
-            </a>
-          </li>
-          <li>
-            <a class="home-agent" href="team.html">
-              <img src="assets/team/edwin-portrait.jpg" width="1024" height="1024" alt="AI-generated character image for Edwin, an AI teammate">
-              <span class="card-name">Edwin</span>
-              <span class="ai-badge">AI teammate</span>
-            </a>
-          </li>
-          <li>
-            <a class="home-agent" href="team.html">
-              <img src="assets/team/elias-portrait.jpg" width="512" height="512" alt="AI-generated character image for Elias, an AI teammate">
-              <span class="card-name">Elias</span>
-              <span class="ai-badge">AI teammate</span>
-            </a>
-          </li>
-          <li>
-            <a class="home-agent" href="team.html">
-              <img src="assets/team/mack-portrait.jpg" width="1024" height="1024" alt="AI-generated character image for Mack, an AI teammate">
-              <span class="card-name">Mack</span>
-              <span class="ai-badge">AI teammate</span>
-            </a>
-          </li>
-          <li>
-            <a class="home-agent" href="team.html">
-              <img src="assets/team/nora-portrait.jpg" width="512" height="512" alt="AI-generated character image for Nora, an AI teammate">
-              <span class="card-name">Nora</span>
-              <span class="ai-badge">AI teammate</span>
-            </a>
-          </li>
-        </ul>
+        </div>
 
         <p class="home-team-more"><a class="btn btn-ghost" href="team.html">Meet the team</a></p>
       </div>
@@ -316,13 +348,32 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <a class="footer-brand" href="#top">
-        <img src="assets/logo-icon-192.png" width="28" height="28" alt="">
-        Korvix <span>Prime</span>
-      </a>
-      <p>
-        <a href="https://x.com/P7RIM3" rel="noopener noreferrer">@P7RIM3 on X</a>
-      </p>
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <a class="footer-brand" href="#top">
+            <img src="assets/logo-icon-192.png" width="28" height="28" alt="">
+            Korvix <span>Prime</span>
+          </a>
+          <p class="footer-tag">Rabbit holes, but with sources.</p>
+        </div>
+        <nav class="footer-col" aria-label="Footer">
+          <span class="footer-h">Explore</span>
+          <a href="#cover">What we cover</a>
+          <a href="#latest">Latest</a>
+          <a href="#about">About</a>
+          <a href="team.html">Team</a>
+        </nav>
+        <div class="footer-col">
+          <span class="footer-h">Follow</span>
+          <p>
+            <a href="https://x.com/P7RIM3" rel="noopener noreferrer">@P7RIM3 on X</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Korvix Prime</span>
+        <span>Cyber · AI · Big tech · Space</span>
+      </div>
     </div>
   </footer>
 </body>

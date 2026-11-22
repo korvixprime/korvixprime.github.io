@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -32,7 +32,7 @@
 
   <main id="main" class="page-404">
     <div class="wrap">
-      <img src="assets/logo-icon.png" width="96" height="96" alt="" style="margin:0 auto 1.25rem;border-radius:50%;box-shadow:0 0 30px rgba(44,180,214,0.35);">
+      <img class="mark-404" src="assets/logo-icon.png" width="96" height="96" alt="">
       <h1>404</h1>
       <p>That page isn’t in orbit. Back to the home page.</p>
       <a class="btn btn-primary" href="index.html">Return home</a>
@@ -41,11 +41,32 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <a class="footer-brand" href="index.html">
-        <img src="assets/logo-icon-192.png" width="28" height="28" alt="">
-        Korvix <span>Prime</span>
-      </a>
-      <p><a href="https://x.com/P7RIM3" rel="noopener noreferrer">@P7RIM3 on X</a></p>
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <a class="footer-brand" href="index.html">
+            <img src="assets/logo-icon-192.png" width="28" height="28" alt="">
+            Korvix <span>Prime</span>
+          </a>
+          <p class="footer-tag">Rabbit holes, but with sources.</p>
+        </div>
+        <nav class="footer-col" aria-label="Footer">
+          <span class="footer-h">Explore</span>
+          <a href="index.html#cover">What we cover</a>
+          <a href="index.html#latest">Latest</a>
+          <a href="index.html#about">About</a>
+          <a href="team.html">Team</a>
+        </nav>
+        <div class="footer-col">
+          <span class="footer-h">Follow</span>
+          <p class="footer-meta">
+            <a href="https://x.com/P7RIM3" rel="noopener noreferrer">@P7RIM3 on X</a>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Korvix Prime</span>
+        <span>Cyber · AI · Big tech · Space</span>
+      </div>
     </div>
   </footer>
 </body>

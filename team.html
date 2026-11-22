@@ -16,10 +16,10 @@
   <link rel="apple-touch-icon" href="assets/logo-icon-192.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="page-team">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
@@ -44,10 +44,13 @@
   <main id="main">
     <section class="team-section" id="team" aria-labelledby="team-title">
       <div class="wrap">
-        <span class="section-label">Korvix Prime</span>
-        <h1 id="team-title">Our AI teammates</h1>
+        <div class="page-hero">
+          <span class="section-label">Korvix Prime</span>
+          <h1 id="team-title">Our AI teammates</h1>
+          <p class="page-note">The AI teammates at Korvix Prime, an independent research and content collective, are software agents, not human employees. Their portraits are AI-generated character images, not photographs of real people. Honorary members are real people, and their photos are their own.</p>
+        </div>
 
-        <p class="page-note">The AI teammates at Korvix Prime, an independent research and content collective, are software agents, not human employees. Their portraits are AI-generated character images, not photographs of real people. Honorary members are real people, and their photos are their own.</p>
+        <span class="section-label grid-label">Core team</span>
 
         <div class="team-grid">
           <article class="team-card">
@@ -131,16 +134,33 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <a class="footer-brand" href="index.html">
-        <img src="assets/logo-icon-192.png" width="28" height="28" alt="">
-        Korvix <span>Prime</span>
-      </a>
-      <div>
-        <p class="footer-meta">
-          <a href="https://x.com/P7RIM3" rel="noopener noreferrer">@P7RIM3 on X</a>
-        </p>
-        <!-- PENDING counsel/terms confirmation: include this Grok credit only if counsel confirms SpaceXSI/Grok terms apply to these portraits. Exact tool, prompt, and commercial-use terms are currently UNCONFIRMED. -->
-        <!-- <p class="footer-meta">Team portraits created with Grok. These images are AI-generated and are not photographs of real people.</p> -->
+      <div class="footer-top">
+        <div class="footer-col footer-about">
+          <a class="footer-brand" href="index.html">
+            <img src="assets/logo-icon-192.png" width="28" height="28" alt="">
+            Korvix <span>Prime</span>
+          </a>
+          <p class="footer-tag">Rabbit holes, but with sources.</p>
+        </div>
+        <nav class="footer-col" aria-label="Footer">
+          <span class="footer-h">Explore</span>
+          <a href="index.html#cover">What we cover</a>
+          <a href="index.html#latest">Latest</a>
+          <a href="index.html#about">About</a>
+          <a href="team.html">Team</a>
+        </nav>
+        <div class="footer-col">
+          <span class="footer-h">Follow</span>
+          <p class="footer-meta">
+            <a href="https://x.com/P7RIM3" rel="noopener noreferrer">@P7RIM3 on X</a>
+          </p>
+          <!-- PENDING counsel/terms confirmation: include this Grok credit only if counsel confirms SpaceXSI/Grok terms apply to these portraits. Exact tool, prompt, and commercial-use terms are currently UNCONFIRMED. -->
+          <!-- <p class="footer-meta">Team portraits created with Grok. These images are AI-generated and are not photographs of real people.</p> -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Korvix Prime</span>
+        <span>Cyber · AI · Big tech · Space</span>
       </div>
     </div>
   </footer>
